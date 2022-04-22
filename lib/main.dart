@@ -10,27 +10,31 @@ class BMICalculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //theme: ThemeData.light(),
-      //darkTheme: ThemeData.dark(),
-      /*theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.blue,
-        ).copyWith(
-          secondary: Colors.green,
-        ),
-        textTheme: const TextTheme(bodyText2: TextStyle(color: Colors.purple)),
-      ),*/
       theme: ThemeData(
         colorScheme: ColorScheme.light(
-          //primary: Colors.red
+          primary: Colors.red.shade50,
+          background: Colors.yellow,
+          onBackground: Colors.blue
+          //Adjustments to light
         ),
       ),
-      darkTheme: ThemeData(colorScheme: ColorScheme.highContrastDark(
-
+      darkTheme: ThemeData(colorScheme: ColorScheme.dark(
+        primary: Colors.red.shade400
+        //adjustments to dark
         ),
       ),
-      //highContrastTheme: ,
-      //highContrastDarkTheme: ,
+      highContrastTheme: ThemeData(
+        colorScheme: ColorScheme.highContrastLight(
+          primary: Colors.red.shade600
+          //adjustments to high contrast light
+        ),
+      ),
+      highContrastDarkTheme: ThemeData(
+        colorScheme: ColorScheme.highContrastDark(
+          primary: Colors.red.shade800
+          //adjustments to high contrast dark
+        )
+      ),
 
       home: InputPage(),
     );
